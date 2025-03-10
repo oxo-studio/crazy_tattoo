@@ -1,12 +1,12 @@
-import React,{useEffect} from "react";
+import {useEffect} from "react";
 import NavBar from "../components/navbar";
 import ArteImg from '../img/arte.jpg';
 import Footer from '../components/footer'
 
-import i18n, { use } from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+
+import { useTranslation,  } from "react-i18next";
+
+
 
 function Privacy() {
 
