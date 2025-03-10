@@ -1,0 +1,7 @@
+.separator {
+    width: 2px;
+    background-color: red; /* Colore della linea */
+    height: 15vh; /* Altezza maggiore per essere più visibile */
+    display: inline-block; /* Assicura che il div sia visibile */
+    margin: 0 10px; /* Spazio intorno alla linea */
+}

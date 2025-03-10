@@ -1,0 +1,87 @@
+.climate-crisis {
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1979;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    color: white; /* Assicurati che il colore sia completamente opaco */
+}
+
+.section1 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row; /* Dispone gli elementi in linea orizzontale */
+    align-items: center;
+    justify-content: space-around; /* Distribuisce uniformemente gli elementi */
+    background-color: #242424;
+    z-index: 10;
+    pointer-events: none;
+    padding: 0 20%;
+}
+
+.section1-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    position: relative;
+    margin-top: 150px;
+    width: 100%;
+    height: 100%; /* Usa tutta l'altezza del container */
+    overflow: hidden;
+    display: flex;
+}
+
+.background-image {
+    width: 70%;
+    height: 50%;
+    object-fit: cover; /* Assicura che l'immagine copra tutto lo spazio */
+}
+
+/* Testo con effetto parallasse sovrapposto all'immagine */
+.parallax-text {
+    position: absolute;
+    top: 71%;
+    left: -15%;
+    color: white;
+    text-align: left;
+}
+
+.overlay-title {
+    margin: 0;
+}
+
+.overlay-subtitle {
+    margin-top: 0.5rem;
+}
+
+/* Colonna di testo a destra */
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.right-heading {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.right-paragraph {
+    line-height: 1.6;
+}
+
+
+         
+ 
+
+   

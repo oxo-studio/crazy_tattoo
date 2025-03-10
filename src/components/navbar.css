@@ -1,0 +1,314 @@
+.climate-crisis {
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1979;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    color: white; /* Assicurati che il colore sia completamente opaco */
+}
+
+.link {
+    text-decoration: none;
+    position: relative;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    font-size: 1.5rem; 
+    transition: color 0.5s ease-in-out; 
+}
+
+/* Pseudo-elemento di base per tutti i link */
+.link::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; 
+    width: 0px; 
+    height: 2px; 
+    background-color: red; 
+    opacity: 0; 
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+
+/* HOME: linea rossa sotto che entra da sinistra a destra */
+.link.home::before {
+    left: 0; 
+}
+.link.home:hover::before,
+.link.home.active::before {
+    width: 100%; 
+    opacity: 1;
+   
+}
+
+/* CHI SIAMO: linea rossa nel mezzo */
+.link.chisiamo::before {
+    top: 17px;
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.link.chisiamo:hover::before,
+.link.chisiamo.active::before {
+    opacity: 1; 
+    width: 100%; 
+}
+
+/* GALLERY: X centrata */
+.link.gallery::before {
+    content: '✖'; 
+    position: absolute;
+    left: 40%; 
+    top: -25%; 
+    transform: translate(-50%, -50%); 
+    font-size: 36px; 
+    color: red; 
+    opacity: 0; 
+    transition: opacity 0.7s ease-in-out; 
+}
+.link.gallery:hover::before,
+.link.gallery.active::before {
+    opacity: 1; 
+}
+
+/* CONTATTI: punto rosso sotto */
+.link.contatti::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-radius: 50%; 
+    background-color: red; 
+    position: absolute;
+    left: 50%; 
+    bottom: -7px; 
+    transform: translateX(-50%);
+    opacity: 0; 
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+.link.contatti:hover::before,
+.link.contatti.active::before {
+    width: 10px; 
+    height: 10px; 
+    opacity: 1; 
+}
+
+/* Stile attivo per HOME */
+.link.home.active::before {
+    width: 100%; 
+    opacity: 1; 
+
+}
+
+/* Stile attivo per CHI SIAMO */
+.link.chisiamo.active::before {
+    opacity: 1; 
+    width: 100%; 
+}
+
+/* Stile attivo per GALLERY */
+.link.gallery.active::before {
+    opacity: 1; 
+}
+
+/* Stile attivo per CONTATTI */
+.link.contatti.active::before {
+    width: 10px; 
+    height: 10px; 
+    opacity: 1; 
+}
+
+/* Media query per dispositivi mobili (larghezza massima di 768px) */
+@media (max-width: 768px) {
+    .link::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px; /* Manteniamo una piccola distanza dal testo */
+        width: 0;
+        height: 2px;
+        background-color: red;
+        opacity: 0;
+        transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    /* HOME: Linea rossa sotto */
+    .link.home::before {
+        left: 70%; /* Centriamo la linea */
+        transform: translateX(-5%);
+       
+    }
+    .link.home:hover::before,
+    .link.home.active::before {
+        width: 50%; /* La linea sarà più corta per schermi piccoli */
+        opacity: 1;
+         
+    }
+
+    /* CHI SIAMO: Linea rossa centrale */
+    .link.chisiamo::before {
+        left: 50%;
+        top: 17px;
+        transform: translateX(-50%);
+    }
+    .link.chisiamo:hover::before,
+    .link.chisiamo.active::before {
+        width: 50%;
+        opacity: 1;
+    }
+
+    /* GALLERY: X centrata */
+    .link.gallery::before {
+        content: '✖';
+        position: absolute;
+        left:45%; /* Al centro */
+        top: 20%; /* Regolato per adattarsi al testo */
+        transform: translate(-50%, -50%);
+        font-size: 35px; /* Ridotto per schermi più piccoli */
+        color: red;
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+    }
+    .link.gallery:hover::before,
+    .link.gallery.active::before {
+        opacity: 1;
+    }
+
+    /* CONTATTI: Punto rosso sotto */
+    .link.contatti::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-radius: 80%;
+        background-color: red;
+        position: absolute;
+        left: 50%; /* Centriamo il punto */
+        bottom: -7px; /* Manteniamo una piccola distanza */
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    .link.contatti:hover::before,
+    .link.contatti.active::before {
+        width: 7px; /* Dimensioni ridotte per il punto */
+        height: 7px;
+        opacity: 1;
+    }
+
+    /* HOME: linea rossa sotto che entra da sinistra a destra */
+.link.home::before {
+    left: 0; 
+}
+.link.home:hover::before,
+.link.home.active::before {
+    width: 100%; 
+    opacity: 1; 
+}
+
+/* CHI SIAMO: linea rossa nel mezzo */
+.link.chisiamo::before {
+    top: 17px;
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.link.chisiamo:hover::before,
+.link.chisiamo.active::before {
+    opacity: 1; 
+    width: 100%; 
+}
+
+}
+
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column; /* Organizza i link in colonna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
+    height: 100%; /* Assicura che occupi l'intera altezza */
+    gap: 1.5rem; /* Spaziatura tra i link */
+  }
+
+  @media (max-width: 480px) {
+    
+
+    .link::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px; /* Riduciamo lo spazio dal testo */
+        width: 0;
+        height: 1px; /* Linea più sottile */
+        background-color: red;
+        opacity: 0;
+        transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    /* HOME: Linea rossa sotto */
+    .link.home::before {
+        left: 50%; /* Centra la linea */
+        transform: translateX(-50%);
+    }
+    .link.home:hover::before,
+    .link.home.active::before {
+        width: 100%; /* La linea sarà ancora più corta */
+        opacity: 1;
+    }
+
+    /* CHI SIAMO: Linea rossa centrale */
+    .link.chisiamo::before {
+        left: 50%;
+        top: 15px; /* Posizionamento ottimale */
+        transform: translateX(-50%);
+    }
+    .link.chisiamo:hover::before,
+    .link.chisiamo.active::before {
+        width: 100%;
+        opacity: 1;
+    }
+
+    /* GALLERY: X centrata */
+    .link.gallery::before {
+        content: '✖';
+        position: absolute;
+        left: 50%; /* Centro esatto */
+        top: 20%; 
+        transform: translate(-50%, -50%);
+        font-size: 30px; /* Font più piccolo per X */
+        color: red;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+    .link.gallery:hover::before,
+    .link.gallery.active::before {
+        opacity: 1;
+    }
+
+    /* CONTATTI: Punto rosso sotto */
+    .link.contatti::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-radius: 50%; /* Riduciamo la dimensione */
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+    .link.contatti:hover::before,
+    .link.contatti.active::before {
+        width: 5px;
+        height: 5px;
+        opacity: 1;
+    }
+
+    /* Navbar: Spaziatura tra i link */
+    .navbar {
+        gap: 1rem; /* Spaziatura più ridotta tra i link */
+    }
+}
