@@ -1,15 +1,14 @@
 
-import React, { useEffect, useRef } from 'react';
 import NavBar from "../components/navbar";
 
 import emailjs from "@emailjs/browser";
 import Sezionefinale from '../components/sezionefinale';
 import Footer from '../components/footer';
 
-import i18n, { use } from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+
+import { useTranslation, } from "react-i18next";
+
+
 import "leaflet/dist/leaflet.css";
 import Mappa from '../components/Mappa'
 

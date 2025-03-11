@@ -13,7 +13,7 @@ import crazy from '../img/crazyyy.jpg'
 import { useTranslation, } from "react-i18next";
 
 
-import './chisiamo.css';  // Same folder as the component
+
 
 
 gsap.registerPlugin(ScrollTrigger);
