@@ -78,7 +78,7 @@ function Testimonials() {
     };
 
     return (
-        <div ref={containerRef} className="flex flex-col items-center justify-center h-auto text-center">
+        <div ref={containerRef} className="flex flex-col items-center justify-center h-auto text-center mt-[-100px]">
             {/* Titolo con doppio livello */}
             <div className="relative mt-[-900px] lg:mt-[-700px] md:mt-[-700px] sm:mt-[-700px] mb-10 md:mb-10 lg:mb-12">
                 <h1

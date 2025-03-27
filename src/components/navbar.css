@@ -225,8 +225,8 @@
 .mobile-menu-links {
     display: flex;
     flex-direction: column; /* Organizza i link in colonna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra orizzontalmente */
+    justify-content:center ; /* Centra verticalmente */
+    align-items:center; /* Centra orizzontalmente */
     height: 100%; /* Assicura che occupi l'intera altezza */
     gap: 1.5rem; /* Spaziatura tra i link */
   }
@@ -310,5 +310,13 @@
     /* Navbar: Spaziatura tra i link */
     .navbar {
         gap: 1rem; /* Spaziatura più ridotta tra i link */
+    
     }
 }
+
+@media (max-width: 768px) { 
+    .navbar {
+     margin-left: -200px;
+    }
+}
+

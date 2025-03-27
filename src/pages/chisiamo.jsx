@@ -87,11 +87,13 @@ function ChiSiamo() {
             <div className="w-full flex flex-col items-center justify-start">
           
             <div className="relative w-full h-screen">
-    <img
-        src={crazy}
-        alt="Arte"
-        className="w-full h-full object-cover"
-    />
+            <img
+    src={crazy}
+    alt="Arte"
+    className="w-full h-full absolute transform sm:translate-x-[100px] md:translate-x-0"
+/>
+
+
     <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent"></div>
 
 

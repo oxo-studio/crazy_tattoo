@@ -80,6 +80,18 @@
     line-height: 1.6;
 }
 
+@media (max-width: 768px) { 
+    .fulmine {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) { 
+    .spostati {
+       margin-top: -190px; 
+    }
+}
+
 
          
  
