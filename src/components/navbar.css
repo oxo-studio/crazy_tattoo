@@ -273,9 +273,9 @@
     .link.gallery::before {
         content: '✖';
         position: absolute;
-        left: 50%; /* Centro esatto */
+        left: 42%; /* Centro esatto */
         top: 20%; 
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         font-size: 30px; /* Font più piccolo per X */
         color: red;
         opacity: 0;
