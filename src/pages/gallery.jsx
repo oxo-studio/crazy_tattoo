@@ -106,7 +106,7 @@ function Gallery() {
                     <div key={categoryIndex} className="category-section my-12">
                         {/* Sezione RESIDENT */}
                         {(category.name === "Crazy" || category.name === "Tina") && (
-                            <div className="resident-section text-center lg:-mb-16 md:-mb-14 sm:-mb-10 -mb-1 text-stone-700"
+                            <div className="resident-section text-center lg:-mb-16 md:-mb-14 sm:-mb-10 -mb-[20px] text-stone-700"
                                 ref={(el) => (residentRefs.current[categoryIndex] = el)}>
                                 <h2 className="resident-title climate-crisis font-bold lg:text-[9rem] md:text-[6rem] sm:text-[5rem] text-[3rem] leading-none">
                                     RESIDENT
@@ -116,9 +116,9 @@ function Gallery() {
 
                         {/* Sezione GUEST */}
                         {category.isGuest && (
-                            <div className="guest-section text-center my-8 lg:-mb-44 md:-mb-40 sm:-mb-36 -mb-96 text-stone-700"
+                            <div className="guest-section text-center my-8 lg:-mb-44 md:-mb-40 sm:-mb-36 -mb-[200px] text-stone-700"
                                 ref={(el) => (guestRefs.current[categoryIndex] = el)}>
-                                <h2 className="guest-title climate-crisis font-bold lg:text-[10rem] md:text-[8rem] sm:text-[7rem] text-[3rem] leading-none">
+                                <h2 className="guest-title climate-crisis font-bold lg:text-[10rem] md:text-[8rem] sm:text-[7rem] text-[4rem] leading-none">
                                     GUEST
                                 </h2>
                             </div>
