@@ -75,10 +75,10 @@ export default function NavBar() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1 ml-3">
             <a href="https://www.facebook.com/profile.php?id=61561658697524&locale=it_IT" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-4xl hover:text-red-600 transition duration-300" />
+              <FaFacebook className="text-4xl text-white  hover:text-red-600 transition duration-300" />
             </a>
             <a href="https://www.instagram.com/crazyandtinatattoo/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-4xl ml-4 hover:text-red-600 transition duration-300" />
+              <FaInstagram className="text-4xl text-white ml-4 hover:text-red-600 transition duration-300" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -171,9 +171,9 @@ export default function NavBar() {
                   </a>
                 </div>
                 <div className="py-6 text-center items-center">
-                  <p className="courgette-regular py-2">Contatti - 3486499078</p>
-                  <p className="courgette-regular py-2">Orari - Lun-Ven 11.00 19.00</p>
-                  <p className="courgette-regular">Dove siamo - Via tra tra fra</p>
+                  <p className="courgette-regular py-2">Contatti - 3791022541</p>
+                  <p className="courgette-regular py-2">Lun-Sab 12.00 - 18.00</p>
+                  <p className="courgette-regular">Via Briniani 8, Brugnato SP</p>
                 </div>
               </div>
             </div>
