@@ -90,7 +90,7 @@ function Section1() {
                         <img
                             src={arteImg}
                             alt="Studio tatuaggi Val di Vara - Opere d'arte in Liguria"
-                            className="parallax-image object-cover h-80 w-80 sm:h-[300px] md:h-[400px] lg:h-[500px] text-3xl lg:text-4xl md:text-3xl sm:w-3/4 md:w-2/2 lg:max-w-6xl lg:mt-10 sm:static"
+                            className="parallax-image object-cover h-80 w-full sm:h-[300px] md:h-[400px] lg:h-[500px] text-3xl lg:text-4xl md:text-3xl sm:w-3/4 md:w-2/2 lg:max-w-6xl lg:mt-10 sm:static"
                         />
                     </div>
 
