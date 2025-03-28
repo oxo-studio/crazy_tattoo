@@ -83,7 +83,7 @@ function Testimonials() {
             <div className="relative mt-[-900px] lg:mt-[-700px] md:mt-[-700px] sm:mt-[-700px] mb-10 md:mb-10 lg:mb-12">
                 <h1
                     ref={title1Ref}
-                    className="climate-crisis text-5xl sm:text-7xl lg:text-9xl font-bold text-stone-700 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    className="climate-crisis text-4xl sm:text-7xl lg:text-9xl font-bold text-stone-700 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 >
                     Testimonials
                 </h1>
@@ -119,7 +119,7 @@ function Testimonials() {
                         <p className="text-column courgette-regular text-2xl lg:text-3xl md:text-3xl sm:text-2xl mb-5 text-justify">
                             {testimonials[currentIndex].text}
                         </p>
-                        <h3 className="climate-crisis text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
+                        <h3 className="climate-crisis text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
                             {testimonials[currentIndex].author}
                         </h3>
                     </div>
