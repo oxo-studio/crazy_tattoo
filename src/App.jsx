@@ -13,6 +13,8 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 
+import Seo from './components/seo/Seo'
+
 i18n
   .use(initReactI18next) // Passa i18n a React
   .use(LanguageDetector)
@@ -32,6 +34,7 @@ i18n
 function App() {
   return (
     <>
+      <Seo/>
       <NavBar />
       <Hero />
       <Section1 />
