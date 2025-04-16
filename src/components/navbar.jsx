@@ -177,6 +177,28 @@ export default function NavBar() {
                 </div>
               </div>
             </div>
+
+            <div className="py-6">
+               <div className="flex flex-col items-center space-y-4">
+                  <p className="text-white font-semibold">{t("lingue_mobile")}</p>
+                     <div className="flex space-x-4">
+                     {languages.map((language) => (
+                     <button
+                        key={language.code}
+                           onClick={() => handleLanguageChange(language.code)}
+                           className={`flex items-center px-3 py-2 rounded-md text-white hover:bg-gray-700 transition ${
+                           selectedLanguage === language.code ? 'bg-gray-700' : ''
+                             }`}
+                             >
+                       <WorldFlag code={language.country_code} className="w-6 h-6 mr-2" />
+                       {language.name}
+                       </button>
+                        ))}
+                  </div>
+                      </div>
+                          </div>
+
+            
           </DialogPanel>
         </Dialog>
       </header>

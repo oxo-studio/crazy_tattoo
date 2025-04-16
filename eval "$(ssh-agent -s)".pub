@@ -1,3 +1,5 @@
 require('dotenv').config();
+
 const sshKey = process.env.SSH_KEY;
-console.log(sshKey);
+
+console.log("Chiave SSH:", sshKey);
