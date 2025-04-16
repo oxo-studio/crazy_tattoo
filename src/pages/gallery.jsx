@@ -92,7 +92,7 @@ function Gallery() {
             {/* Immagine di sfondo con titolo */}
             <div className="relative w-full h-screen">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/30 z-[1]" />
-                <img src={Passione} alt="Arte" className="w-full h-full object-cover" />
+                <img src={Passione} alt="Immagine di sfondo con lui che versa colore in tapper" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center z-0">
                     <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl climate-crisis text-center px-4 py-2 rounded-md ombre">
                         Gallery
@@ -137,7 +137,7 @@ function Gallery() {
                             {category.images.map((image, index) => (
                                 <div key={index} className="gallery-item relative opacity-0 translate-y-10"
                                     ref={(el) => (galleryRefs.current[categoryIndex][index] = el)}>
-                                    <img src={image.src} alt="" className="w-full h-auto object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300" />
+                                    <img src={image.src} alt="Immagini tatuaggi e piercing esegiuti dall'artista" className="w-full h-auto object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300" />
                                 </div>
                             ))}
                         </div>

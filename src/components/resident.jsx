@@ -58,7 +58,7 @@ function Resident() {
           <div className="w-full sm:w-1/2">
             <img
               src={Crazyr}
-              alt="Crazy"
+              alt="Immagine crazy in primo piamo "
               className="w-full h-[450px] object-cover rounded-lg shadow-md"
             />
           </div>
@@ -84,7 +84,7 @@ function Resident() {
           <div className="w-full sm:w-1/2">
             <img
               src={chiara2}
-              alt="Chiara"
+              alt="Chiara la piercer in primo piano"
               className="w-full h-[450px] object-cover rounded-lg shadow-md"
             />
           </div>

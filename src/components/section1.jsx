@@ -80,11 +80,7 @@ function Section1() {
             <div className="section1 relative -mb-28 md:mb-28">
                 <div className="section1-content relative">
                     <div className="relative w-full overflow-visible wrap">
-                        <img
-                            src={Fulmine}
-                            alt="Illustrazione di fulmine artistico"
-                            className="absolute hidden opacity-30 top-[-400%] right-[-15%] lg:top-[-190%] md:top-[-300%] lg:right-[-15%] sm:right-[-15%] z-[-1] w-[190rem] h-[190rem] rotate-[30deg] filter invert-[0.8] sepia-[1] saturate-[20] hue-rotate-[90deg]"
-                        />
+                       
 
                         {/* Aggiungi 'sm:static' per disabilitare le animazioni su mobile */}
                         <img

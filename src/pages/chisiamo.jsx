@@ -89,7 +89,7 @@ function ChiSiamo() {
             <div className="relative w-full h-screen">
             <img
     src={crazy}
-    alt="Arte"
+    alt="Immagine tatuatore con studio"
     className="w-full h-full absolute transform sm:translate-x-[100px] md:translate-x-0"
 />
 
@@ -115,12 +115,12 @@ function ChiSiamo() {
                     <div className="image2-container relative flex justify-center items-center gap-6 flex-wrap pb-8">
                         <img
                             src={Studio1}
-                            alt="Studio"
+                            alt="Immagine studio con postazione accoglienza"
                             className="paralax-imgstudio background-image2 shadow-lg w-full sm:w-1/2 md:w-2/4 lg:w-2/4 hidden lg:block md:block"
                         />
                         <img
                             src={Studio2}
-                            alt="Arte"
+                            alt="Immagine studio con gran angolo e vista completa"
                             className="paralax-imgstudio background-image3 shadow-lg w-96 sm:w-1/2 md:w-1/3 lg:w-2/2"
                         />
                     </div>
