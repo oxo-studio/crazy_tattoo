@@ -180,7 +180,7 @@ export default function NavBar() {
 
             <div className="py-6">
                <div className="flex flex-col items-center space-y-4">
-                  <p className="text-white font-semibold">{t("lingue_mobile")}</p>
+                  <p className="text-white font-semibold courgette-regular">{t("lingue_mobile")}</p>
                      <div className="flex space-x-4">
                      {languages.map((language) => (
                      <button
