@@ -38,7 +38,7 @@ export default function Hero() {
       <img src={Img1} alt="Crazy N Tina Tattoo background" className="sr-only" />
     </div>
 
-      <div className="relative mx-auto text-center text-white pb-11 sm:pb-20 md:pb-20 lg:pb-40 md:-mb-16 lg:-mb-24">
+      <div className="relative mx-auto text-center text-white pb-11 sm:pb-20 md:pb-20 lg:pb-40 md:-mb-[-130px] lg:-mb-24">
         <h1 className="ombre text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight climate-crisis">
           CRAZY N TINA TATTOO
         </h1>
