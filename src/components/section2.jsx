@@ -44,9 +44,9 @@ function Section2() {
         { img: Frame4, title: "Piercing", text: t("piercing") }
       ].map((item, index) => (
         <div key={index} className="section2-column flex flex-col items-center justify-center">
-          <img src={item.img} alt={item.title} className="mb-4 w-20 md:w-24 lg:w-28" />
+          <img src={item.img} alt={item.title} className="mb-4 w-20 md:w-24 lg:w-28 lg:mt-[100px] md:mt-[-125px]" />
           <h1 className="climate-crisis text-white text-3xl md:text-4xl mb-3">{item.title}</h1>
-          <p className="courgette-regular text-xl md:text-2xl">{item.text}</p>
+          <p className="courgette-regular text-xl md:text-2xl md:mb-[150px] ">{item.text}</p>
         </div>
       ))}
     </div>

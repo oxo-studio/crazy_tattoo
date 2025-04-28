@@ -38,6 +38,7 @@ function Section3() {
                     scrub: true,
                     end: "bottom top",
                 }
+               
             });
 
             // Animazione delle immagini con entrata (simile a Section1)
@@ -82,11 +83,12 @@ function Section3() {
             <div className="section2-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-24">
                 {/* Container delle immagini */}
                 <div className="image2-container relative flex justify-center items-center gap-6 flex-wrap pb-8">
-                    <img 
-                        src={Immagine1} 
-                        alt="Immagine Crazy Rana" 
-                        className="paralax-image2 background-image2 shadow-lg w-full sm:w-1/2 md:w-2/4 lg:w-2/4 lg:block md:block"
-                    />
+                <img 
+                  src={Immagine1} 
+                  alt="Immagine Crazy Rana" 
+                  className="paralax-image2 background-image2 shadow-lg w-full sm:w-1/2 md:w-2/4 lg:w-2/4 lg:block md:block md:mt-[-380px] lg:mt-[-360px]"
+                />
+
                     <img 
                         src={Immagine2} 
                         alt="Immagine New School" 
@@ -95,7 +97,7 @@ function Section3() {
                 </div>
 
                 {/* Testo sovrapposto */}
-                <div className="paralax-test2 text-center sotto2 mt-[850px] lg:mt-[400px] z-20">
+                <div className="paralax-test2 text-center sotto2 mt-[850px] lg:mt-[400px] md:mt-[550px] z-20">
                     <h2 className="text-center marginesopra overlay-title climate-crisis text-white text-3xl lg:text-6xl md:text-5xl sm:text-3xl font-bold mb-8 mx-auto ombre">
                        {t('section_3_h2')}
                     </h2>

@@ -75,7 +75,7 @@ export default function NavBar() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1 ml-3">
             <a href="https://www.facebook.com/profile.php?id=61561658697524&locale=it_IT" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-4xl text-white  hover:text-red-600 transition duration-300" />
+              <FaFacebook  className="text-4xl text-white  hover:text-red-600 transition duration-300" />
             </a>
             <a href="https://www.instagram.com/crazyandtinatattoo/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-4xl text-white ml-4 hover:text-red-600 transition duration-300" />
