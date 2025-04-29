@@ -164,10 +164,10 @@
         content: '✖';
         position: absolute;
         left:45%; /* Al centro */
-        top: 20%; /* Regolato per adattarsi al testo */
+        top: 90%; /* Regolato per adattarsi al testo */
         transform: translate(-50%, -50%);
         font-size: 35px; /* Ridotto per schermi più piccoli */
-        color: red;
+        color: red !important;
         opacity: 0;
         transition: opacity 0.7s ease-in-out;
     }
@@ -219,6 +219,14 @@
     width: 100%; 
 }
 
+}
+
+/* Spostamento X più in basso su schermi medi */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .link.gallery::before {
+        top: 15%; /* Sposta leggermente più in basso */
+        color: red !important;
+    }
 }
 
 
