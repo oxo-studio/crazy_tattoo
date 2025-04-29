@@ -38,7 +38,7 @@ function Testimonials() {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current, // Il div che attiva l'animazione
-                start: "top 150%", // Inizia l'animazione quando il div è visibile all'80%
+                start: "top 80%", // Inizia l'animazione quando il div è visibile all'80%
                 toggleActions: "play none none reverse"
  // L'animazione parte solo una volta
             },
