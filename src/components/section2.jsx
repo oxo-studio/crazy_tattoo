@@ -11,8 +11,12 @@ import Container from './Container'
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 function Section2() {
   const { t } = useTranslation();
+
+  
 
   useEffect(() => {
     gsap.utils.toArray(".section2-column").forEach((column) => {
@@ -44,7 +48,7 @@ function Section2() {
         { img: Frame4, title: "Piercing", text: t("piercing") }
       ].map((item, index) => (
         <div key={index} className="section2-column flex flex-col items-center justify-center mt-[100px]">
-          <img src={item.img} alt={item.title} className="mb-4 w-20 md:w-24 lg:w-28 lg:mt-[100px] md:mt-[-125px] " />
+          <img src={item.img} alt={item.title} className="mb-4 w-20 md:w-24 lg:w-28 lg:mt-[-50px] md:mt-[-125px] " />
           <h1 className="climate-crisis text-white text-3xl md:text-4xl mb-3">{item.title}</h1>
           <p className="courgette-regular text-xl md:text-2xl md:mb-[150px] ">{item.text}</p>
         </div>

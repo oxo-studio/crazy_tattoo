@@ -1,6 +1,6 @@
-import React from "react";
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+
 
 function MapComponent() {
   const position = [44.2398, 9.7275]; // Coordinate di Via Briniati, Brugnato SP

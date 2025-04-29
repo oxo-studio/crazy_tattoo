@@ -13,6 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Section3() {
     const { t } = useTranslation();
 
+    
+
     useEffect(() => {
         // Controlla se la larghezza dello schermo è maggiore di 768px
       {

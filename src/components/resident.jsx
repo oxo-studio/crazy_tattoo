@@ -103,4 +103,5 @@ function Resident() {
   );
 }
 
+
 export default Resident;

@@ -28,6 +28,8 @@ export default function Hero() {
     });
   }, []);
 
+  
+
   return (
     <div className="hero-section relative isolate overflow-hidden min-h-screen flex flex-col justify-end">
      <div className="hero-parallax-bg absolute inset-0 bg-cover bg-center"

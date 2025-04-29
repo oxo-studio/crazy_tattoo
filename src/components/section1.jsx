@@ -106,6 +106,8 @@ function Section1() {
             }
         );
     }, []);
+
+  
     
 
     return (

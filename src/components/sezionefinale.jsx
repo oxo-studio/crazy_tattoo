@@ -10,6 +10,8 @@ function SezioneFinale() {
    
     const {t} = useTranslation();
 
+
+
     return (
         <div className="w-full -mt-24 mb-20">
             <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-6 relative items-start">

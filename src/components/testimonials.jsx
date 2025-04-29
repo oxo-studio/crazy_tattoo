@@ -8,7 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 function Testimonials() {
     
     const {t}= useTranslation()
-    
+
+
+  
     const testimonials = [
         {
             text: t('testimonial_1'),
