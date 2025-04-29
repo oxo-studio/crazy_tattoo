@@ -33,18 +33,15 @@ function Testimonials() {
 
     // Attivare GSAP ScrollTrigger per l'animazione
     useEffect(() => {
-        const startTrigger = window.innerWidth >= 768 && window.innerWidth < 1024
-            ? "top 90%" // Se siamo in md, animazione parte prima
-            : "top 150%"; // Altrimenti come prima
-    
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: containerRef.current,
-                start: startTrigger,
-                toggleActions: "play none none reverse",
+                trigger: containerRef.current, // Il div che attiva l'animazione
+                start: "top 150%", // Inizia l'animazione quando il div è visibile all'80%
+                toggleActions: "play none none reverse"
+ // L'animazione parte solo una volta
             },
         });
-    
+
         timeline
             .fromTo(
                 title1Ref.current,
@@ -55,10 +52,9 @@ function Testimonials() {
                 title2Ref.current,
                 { x: "-100%", opacity: 0 },
                 { x: "0%", opacity: 1, duration: 1, ease: "power2.out" },
-                "<"
+                "<" // Esegui le due animazioni in parallelo
             );
     }, []);
-    
 
     // Cambia testimonianza automaticamente ogni 5 secondi
     useEffect(() => {
@@ -99,7 +95,7 @@ function Testimonials() {
                 </h1>
             </div>
 
-            <div className="text-container flex flex-col items-center justify-center max-w-screen-lg mx-auto md:mb-[200px] px-4">
+            <div className="text-container flex flex-col items-center justify-center max-w-screen-lg mx-auto md:mb-[190px] px-4">
                 <div className="flex items-center space-x-4">
                     {/* Icona per passare alla testimonianza precedente */}
                     <svg

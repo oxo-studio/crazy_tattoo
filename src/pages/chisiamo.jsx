@@ -50,7 +50,7 @@ function ChiSiamo() {
 
         // Effetto parallasse per il testo
         gsap.to(".paralax-testostudio", {
-            y: -1300,
+            y: -800,
             ease: "none",
             scrollTrigger: {
                 trigger: ".section2-content",
