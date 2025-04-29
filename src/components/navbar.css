@@ -65,7 +65,7 @@
     top: -25%; 
     transform: translate(-50%, -50%); 
     font-size: 36px; 
-    color: red; 
+    color: red !important; 
     opacity: 0; 
     transition: opacity 0.7s ease-in-out; 
 }
@@ -226,6 +226,7 @@
     .link.gallery::before {
         top: 15%; /* Sposta leggermente più in basso */
         color: red !important;
+        left:35%;
     }
 }
 
@@ -285,7 +286,7 @@
         top: 20%; 
         transform: translate(-50%, -60%);
         font-size: 30px; /* Font più piccolo per X */
-        color: red;
+        color: red !important;
         opacity: 0;
         transition: opacity 0.6s ease-in-out;
     }
