@@ -29,7 +29,7 @@
     bottom: -5px; 
     width: 0px; 
     height: 2px; 
-    background-color: red; 
+    background-color: red !important; 
     opacity: 0; 
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; 
 }
@@ -80,7 +80,7 @@
     width: 0; 
     height: 0; 
     border-radius: 50%; 
-    background-color: red; 
+    background-color: red !important; 
     position: absolute;
     left: 50%; 
     bottom: -7px; 
@@ -129,7 +129,7 @@
         bottom: -5px; /* Manteniamo una piccola distanza dal testo */
         width: 0;
         height: 2px;
-        background-color: red;
+        background-color: red !important;
         opacity: 0;
         transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
     }
@@ -182,7 +182,7 @@
         width: 0;
         height: 0;
         border-radius: 80%;
-        background-color: red;
+        background-color: red !important;
         position: absolute;
         left: 50%; /* Centriamo il punto */
         bottom: -7px; /* Manteniamo una piccola distanza */
@@ -250,7 +250,7 @@
         bottom: -4px; /* Riduciamo lo spazio dal testo */
         width: 0;
         height: 1px; /* Linea più sottile */
-        background-color: red;
+        background-color: red !important;
         opacity: 0;
         transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
@@ -301,7 +301,7 @@
         width: 0;
         height: 0;
         border-radius: 50%; /* Riduciamo la dimensione */
-        background-color: red;
+        background-color: red !important;
         position: absolute;
         left: 50%;
         bottom: -5px;
