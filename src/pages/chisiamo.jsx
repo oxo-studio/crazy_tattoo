@@ -126,7 +126,7 @@ function ChiSiamo() {
                     </div>
 
                     {/* Testo sovrapposto */}
-                    <div className="paralax-testostudio mt-[400px] sm:mt-[500px] lg:mt-[500px] text-center">
+                    <div className="paralax-testostudio mt-[400px] sm:mt-[500px] lg:mt-[500px]  text-center">
                         <h2 className="text-center overlay-title climate-crisis text-white text-3xl lg:text-6xl md:text-5xl sm:text-3xl font-bold mb-8 mx-auto ombre">
                             {t("chisiamo_1")}
                         </h2>
