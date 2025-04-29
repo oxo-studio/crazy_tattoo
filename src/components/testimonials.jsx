@@ -115,7 +115,7 @@ function Testimonials() {
                     </svg>
 
                     {/* Testimonianza corrente */}
-                    <div className="testimonial-content px-4 md:mb-20">
+                    <div className="testimonial-content px-4 md:mb-36">
                         <p className="text-column courgette-regular text-2xl lg:text-3xl md:text-3xl sm:text-2xl mb-5 text-justify">
                             {testimonials[currentIndex].text}
                         </p>
