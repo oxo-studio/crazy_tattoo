@@ -45,7 +45,8 @@ function Resident() {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-550px] lg:mt[-100px] md:mt-[10px] mb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-550px] lg:mt-[-100px] md:mt-[-250px] mb-10">
+
         <h1 className="lg:text-[9rem] md:text-[7rem] sm:text-[5rem] text-5xl lg:-mb-44 md:-mb-36 sm:-mb-32 -mb-32 text-stone-700 text-center mt-20 climate-crisis animate-item">
           Residents
         </h1>
