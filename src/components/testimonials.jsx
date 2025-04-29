@@ -95,7 +95,7 @@ function Testimonials() {
                 </h1>
             </div>
 
-            <div className="text-container flex flex-col items-center justify-center max-w-screen-lg mx-auto md:mb-[100px] px-4">
+            <div className="text-container flex flex-col items-center justify-center max-w-screen-lg mx-auto md:mb-[100px] mb-52 px-4">
                 <div className="flex items-center space-x-4">
                     {/* Icona per passare alla testimonianza precedente */}
                     <svg
