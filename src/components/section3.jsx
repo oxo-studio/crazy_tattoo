@@ -97,7 +97,7 @@ function Section3() {
                 </div>
 
                 {/* Testo sovrapposto */}
-                <div className="paralax-test2 text-center sotto2 mt-[850px] lg:mt-[400px] md:mt-[550px] z-20">
+                <div className="paralax-test2 text-center sotto2 mt-[850px] lg:mt-[400px] md:mt-[450px] z-20">
                     <h2 className="text-center marginesopra overlay-title climate-crisis text-white text-3xl lg:text-6xl md:text-5xl sm:text-3xl font-bold mb-8 mx-auto ombre">
                        {t('section_3_h2')}
                     </h2>
