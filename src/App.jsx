@@ -1,4 +1,6 @@
 import './App.css';
+
+import { useEffect } from 'react';
 import NavBar from './components/navbar';
 import Hero from './components/hero';
 import Section1 from './components/section1';
@@ -32,6 +34,11 @@ i18n
   });
 
 function App() {
+
+  useEffect(()=>{
+    i18n.changeLanguage('it')
+  },[])
+
   return (
     <>
       <Seo/>

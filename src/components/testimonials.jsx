@@ -39,7 +39,7 @@ function Testimonials() {
             scrollTrigger: {
                 trigger: containerRef.current, // Il div che attiva l'animazione
                 start: "top 150%", // Inizia l'animazione quando il div è visibile all'80%
-                toggleActions: "play none none none"
+                toggleActions: "play none none reverse"
  // L'animazione parte solo una volta
             },
         });
