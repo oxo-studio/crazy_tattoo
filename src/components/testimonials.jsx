@@ -118,9 +118,9 @@ function Testimonials() {
 
                     {/* Testimonianza corrente */}
                     <div className="testimonial-content px-4 md:mb-36">
-                        <p className="text-column courgette-regular text-2xl lg:text-3xl md:text-3xl sm:text-2xl mb-5 text-justify">
-                            {testimonials[currentIndex].text}
-                        </p>
+                    <p className="courgette-regular text-white text-center max-w-3xl leading-relaxed text-2xl lg:text-3xl md:text-3xl sm:text-2xl mb-5 mx-auto px-4">
+                      {testimonials[currentIndex].text}
+                    </p>
                         <h3 className="climate-crisis text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
                             {testimonials[currentIndex].author}
                         </h3>

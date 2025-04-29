@@ -67,9 +67,10 @@ function Resident() {
             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white mb-4 climate-crisis">
               Crazy
             </h1>
-            <p className="text-white leading-relaxed courgette-regular mb-14 text-justify text-2xl lg:text-3xl">
-              {t('resident_crazy')}
+            <p className="text-white text-left max-w-prose mx-auto leading-relaxed courgette-regular mb-14 text-2xl lg:text-3xl">
+               {t('resident_crazy')}
             </p>
+
           </div>
         </div>
 
@@ -93,9 +94,10 @@ function Resident() {
             <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white mb-4 climate-crisis">
               Chiara
             </h1>
-            <p className="text-white leading-relaxed courgette-regular mb-14 text-justify text-2xl lg:text-3xl">
-              {t('resident_chiara')}
-            </p>
+           
+            <p className="text-white text-left max-w-prose mx-auto leading-relaxed courgette-regular mb-14 text-2xl lg:text-3xl">
+            {t('resident_chiara')}
+           </p>
           </div>
         </div>
       </div>
