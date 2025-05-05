@@ -4,8 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./section1.css";
 import arteImg from "../img/arte.jpg";
 
+
+
 import { useTranslation } from "react-i18next";
 import Container from "./Container";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -116,7 +119,7 @@ function Section1() {
                 <div className="section1-content relative">
                     <div className="relative w-full overflow-visible wrap">
                        
-
+                    
                         {/* Aggiungi 'sm:static' per disabilitare le animazioni su mobile */}
                         <img
                             src={arteImg}
@@ -135,7 +138,11 @@ function Section1() {
                         </p>
                     </div>
                 </div>
+                
+
+
             </div>
+
         </Container>
     );
 }
