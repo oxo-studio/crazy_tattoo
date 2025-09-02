@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import Logo from '../img/crazy-newlogosplash.svg'
 
 const SplashScreen = ({ onFinish }) => {
   const animRef = useRef(null);
@@ -50,7 +51,7 @@ const SplashScreen = ({ onFinish }) => {
         }}
       >
         <img
-          src="/src/img/crazy-newlogosplash.svg"
+          src={Logo}
           alt="Logo"
           width="700"
           height="700"
