@@ -16,10 +16,17 @@ import Crazy1 from '../img/crazy1.jpg';
 import Crazy2 from '../img/crazy2.jpg';
 import Crazy3 from '../img/crazy3.jpg';
 
+import pescepalla from '../img/pescepalla.jpg'
+import occhio from '../img/occhio.jpg'
+import orologio from '../img/orologio.jpg'
+import meccanico from '../img/meccanico.jpg'
+import samp from '../img/samp.jpg'
+import rondine from '../img/rondine.jpg'
+
 const categories = [
     {
         name: 'Crazy',
-        images: [Immagine1, Immagine2, Immagine3, Crazy1, Crazy2, Crazy3],
+        images: [Immagine1, Immagine2, Immagine3, Crazy1, Crazy2, Crazy3,pescepalla,occhio,orologio,meccanico,samp,rondine],
     },
     {
         name: 'GUEST',

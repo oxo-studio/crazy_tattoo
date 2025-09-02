@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./section1.css";
 import arteImg from "../img/arte.jpg";
+import Saetta from '../img/saetta-crazy.svg'
 
 
 
@@ -108,6 +109,22 @@ function Section1() {
                 },
             }
         );
+
+        gsap.fromTo('.saetta',
+  { opacity: 0 },
+  {
+    opacity: 1,
+    duration: 1.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.section1', // o un altro trigger che preferisci
+      start: 'top 95%', // quando la sezione è al 80% della viewport
+      toggleActions: 'play none none none',
+      // scrub: true, // se vuoi che l’animazione segua lo scroll (opzionale)
+    }
+  }
+);
+
     }, []);
 
   
@@ -116,8 +133,12 @@ function Section1() {
     return (
         <Container>
             <div className="section1 relative -mb-28 md:mb-28">
+
+                
                 <div className="section1-content relative">
+                    
                     <div className="relative w-full overflow-visible wrap">
+                        
                        
                     
                         {/* Aggiungi 'sm:static' per disabilitare le animazioni su mobile */}
@@ -127,6 +148,8 @@ function Section1() {
                             className="parallax-image object-cover h-80 w-full sm:h-[300px] md:h-[400px] lg:h-[500px] text-3xl lg:text-4xl md:text-3xl sm:w-3/4 md:w-2/2 lg:max-w-6xl lg:mt-10 sm:static"
                         />
                     </div>
+
+                      <img src={Saetta} alt="saetta" width={4000} height={4000} className="absolute saetta lg:mt-[-250px] lg:ml-[250px] md:mt-[-80px] md:ml-[130px] hidden md:block -z-40"  />
 
                     {/* Modifica per il testo, visibile solo sui dispositivi mobili */}
                     <div className="parallax-text md:relative sm:absolute sm:top-0 sm:left-0 sm:w-full sm:text-center sm:pt-10">
