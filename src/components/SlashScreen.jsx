@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import PropTypes from 'prop-types';
 import Logo from '../img/crazy-newlogosplash.svg'
+
 
 const SplashScreen = ({ onFinish }) => {
   const animRef = useRef(null);
@@ -65,5 +67,10 @@ const SplashScreen = ({ onFinish }) => {
     </div>
   );
 };
+
+SplashScreen.propTypes = {
+  onFinish: PropTypes.func.isRequired,
+};
+
 
 export default SplashScreen;
