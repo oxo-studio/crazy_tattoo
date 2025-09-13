@@ -1,10 +1,68 @@
+import { useEffect, useRef } from 'react';
 import './sezionefinale.css';
 import { useTranslation } from "react-i18next";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 function SezioneFinale() {
     const {t} = useTranslation();
 
+    const sectionRef = useRef(null)
+    const telefonoRef = useRef([])
+    const contattaciRef = useRef([])
+    const orari1Ref = useRef([])
+    const orariRef = useRef([])
+    const availabileRef = useRef([])
+    const doveRef = useRef([])
+    const indirizzoRef = useRef([])
+
+        const splitText = (text, ref) => {
+    ref.current = []; // Pulisce il ref prima di riempirlo
+    return text.split('').map((char, i) => (
+      <span
+        key={i}
+        ref={(el) => (ref.current[i] = el)}
+        className="inline-block whitespace-nowrap"
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
+  };
+
+
     const phoneNumber = '393791022541'; // Numero di telefono WhatsApp
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+     
+          const animateLetters = (letters, delay = 0) => {
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    };
+
+    animateLetters(contattaciRef.current)
+    animateLetters(telefonoRef.current,0.2)
+    animateLetters(orariRef.current)
+    animateLetters(orari1Ref.current,0.2)
+    animateLetters(availabileRef.current,0.4)
+    animateLetters(doveRef.current)
+    animateLetters(indirizzoRef.current,0.2)
+
+    },[])
 
     return (
         <div className="w-full -mt-24 mb-20">
@@ -14,13 +72,13 @@ function SezioneFinale() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-white w-10 h-10 mb-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                     </svg>
-                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{t("contattaci")}</h2>
+                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{splitText(t("contattaci"),contattaciRef)}</h2>
                     {/* Numero di telefono cliccabile */}
                     <a
                         href={`https://wa.me/${phoneNumber}`}
-                        className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl text-white"
+                        className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl text-white" 
                     >
-                        {phoneNumber}
+                        {splitText(phoneNumber,telefonoRef)}
                     </a>
                 </div>
 
@@ -33,9 +91,9 @@ function SezioneFinale() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-white w-10 h-10 mb-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
-                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{t("orari")}</h2>
-                    <p className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl">Lun-Sab 12.00 - 18.00</p>
-                    <p className="text-sm courgette-regular">Orari variabili su appuntamento</p>
+                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{splitText(t("orari"),orariRef)}</h2>
+                    <p className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl">{splitText("Lun-Sab 12.00 - 18.00",orari1Ref)}</p>
+                    <p className="text-sm courgette-regular">{splitText("Orari variabili su appuntamento",availabileRef)}</p>
                 </div>
 
                 {/* Linee Responsivo */}
@@ -48,12 +106,12 @@ function SezioneFinale() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                     </svg>
-                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{t("dove")}</h2>
-                    <p className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl">Via Briniani 8, Brugnato SP</p>
+                    <h2 className="text-3xl text-white lg:text-4xl md:text-3xl sm:text-2xl climate-crisis mb-4">{splitText(t("dove"),doveRef)}</h2>
+                    <p className="courgette-regular text-2xl lg:text-2xl md:text-3xl sm:text-2xl">{splitText("Via Briniani 8, Brugnato SP",indirizzoRef)}</p>
                 </div>
-            </div>
+            </div> 
         </div>
     );
 }
-
+ 
 export default SezioneFinale;

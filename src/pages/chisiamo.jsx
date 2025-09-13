@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Resident from '../components/resident';
@@ -23,6 +23,24 @@ gsap.registerPlugin(ScrollTrigger);
 function ChiSiamo() {
 
     const {t}= useTranslation();
+
+    const sectionRef = useRef(null)
+    const chiSiamoRef = useRef([])
+
+    const splitText = (text, ref) => {
+    ref.current = []; // Pulisce il ref prima di riempirlo
+    return text.split('').map((char, i) => (
+      <span
+        key={i}
+        ref={(el) => (ref.current[i] = el)}
+        className="inline-block whitespace-nowrap"
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
+  };
+
+
     useEffect(() => {
         // Effetto parallasse per l'immagine
         gsap.to(".paralax-imgstudio", {
@@ -79,6 +97,27 @@ function ChiSiamo() {
             }
         );
 
+         const animateLetters = (letters, delay = 0) => {
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    };
+
+    animateLetters(chiSiamoRef.current)
+
     }, []);
 
     return (
@@ -99,9 +138,9 @@ function ChiSiamo() {
 
   
                     {/* Testo sovrapposto */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center" ref={sectionRef}>
                         <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl climate-crisis text-center px-4 py-2 rounded-md ombre">
-                            Chi Siamo
+                            {splitText(t('chisiamo'),chiSiamoRef)}
                         </h1>
                        </div>
                       

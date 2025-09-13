@@ -45,7 +45,45 @@ function Gallery() {
     const guestRefs = useRef([]);
     const nameRefs = useRef([]);
 
+    const sectionRef = useRef(null)
+    const galleryRef = useRef([])
+
+    const splitText = (text, ref) => {
+    ref.current = []; // Pulisce il ref prima di riempirlo
+    return text.split('').map((char, i) => (
+      <span
+        key={i}
+        ref={(el) => (ref.current[i] = el)}
+        className="inline-block whitespace-nowrap"
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
+  };
+
     useEffect(() => {
+ // Funzione animazione lettere
+    const animateLetters = (letters, delay = 0) => {
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    };
+
+    animateLetters(galleryRef.current)
+
         residentRefs.current.forEach((ref) => {
             gsap.fromTo(ref, { x: '-50%', opacity: 0 }, { x: 0, opacity: 1, duration: 2, ease: 'power4.out', scrollTrigger: { trigger: ref, start: 'top 80%' } });
         });
@@ -76,6 +114,8 @@ function Gallery() {
         galleryRefs.current.forEach((categoryRefs) => categoryRefs.forEach((el) => el && observer.observe(el)));
 
         return () => observer.disconnect();
+
+        
     }, []);
 
     return (
@@ -86,9 +126,9 @@ function Gallery() {
             <div className="relative w-full h-screen">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/30 z-[1]" />
                 <img src={Passione} alt="Immagine di sfondo" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center z-0">
+                <div className="absolute inset-0 flex items-center justify-center z-0" ref={sectionRef}>
                     <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl climate-crisis text-center px-4 py-2 rounded-md ombre">
-                        Gallery
+                        {splitText("Gallery",galleryRef)}
                     </h1>
                 </div>
             </div>

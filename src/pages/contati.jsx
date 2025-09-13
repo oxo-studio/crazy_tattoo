@@ -7,16 +7,85 @@ import Footer from '../components/footer';
 
 
 import { useTranslation, } from "react-i18next";
-
+import gsap from "gsap";
 
 import "leaflet/dist/leaflet.css";
 import Mappa from '../components/Mappa'
+import { useEffect, useRef } from "react";
 
 
 
 function Contatti() {
 
   const {t} = useTranslation();
+
+  const sectionRef = useRef(null)
+  const sectionRefDue = useRef(null)
+  const contattiUno = useRef([])
+  const contattiUnoPunto = useRef([])
+  const contattiDue = useRef([])
+  const contattiTre = useRef([])
+  const contattiQuatro = useRef([])
+
+    const splitText = (text, ref) => {
+    ref.current = []; // Pulisce il ref prima di riempirlo
+    return text.split('').map((char, i) => (
+      <span
+        key={i}
+        ref={(el) => (ref.current[i] = el)}
+        className="inline-block whitespace-nowrap"
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ));
+  };
+
+  useEffect(()=>{
+   
+     const animateLetters = (letters, delay = 0) => {
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    };
+     const animateLetters2 = (letters, delay = 0) => {
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.03,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRefDue.current,
+            start: 'top 70%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    };
+
+    animateLetters(contattiUno.current)
+    animateLetters(contattiUnoPunto.current,0.2)
+    animateLetters(contattiDue.current,0.4)
+    animateLetters2(contattiTre.current)
+    animateLetters2(contattiQuatro.current)
+  },[])
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -52,15 +121,18 @@ function Contatti() {
      
 
       {/* Form Richiedi Appuntamento */}
-      <div  className="w-full max-w-4xl mx-auto p-6 rounded-md shadow-md -mt-[-80px]">
+      <div  className="w-full max-w-5xl mx-auto p-6 rounded-md shadow-md -mt-[-80px]">
         <form onSubmit={sendEmail}>
           <div className="space-y-12">
-            <div className="border-b border-red-600 pb-12">
-              <h2 className="text-white climate-crisis text-2xl md:text-4xl lg:text-5xl mb-6 text-center">
-             {t("contatti_1")}
+            <div className="border-b border-red-600 pb-12" ref={sectionRef}>
+              <h2 className="text-white climate-crisis text-2xl  md:text-4xl lg:text-5xl mb-1 text-center">
+             {splitText(t("contatti_1"),contattiUno)}
               </h2>
-              <p className="mt-1 text-white courgette-regular text-2xl md:text-3xl lg:text-4xl text-center">
-                {t("contatti_2")}
+              <h2 className="text-white climate-crisis text-2xl  md:text-4xl lg:text-5xl mb-6 text-center">
+             {splitText(t("contatti_1.5"),contattiUnoPunto)}
+              </h2>
+              <p className="mt-1 text-white courgette-regular text-2xl ml-[20px] md:text-3xl lg:text-4xl text-center">
+                {splitText(t("contatti_2"),contattiDue)}
               </p>
 
               <div className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-6">
@@ -184,12 +256,12 @@ function Contatti() {
       <div className="w-full max-w-4xl mx-auto p-6 rounded-md shadow-md mt-20 mb-12">
         <form onSubmit={sendEmail}>
           <div className="space-y-12">
-            <div className="border-b border-red-600 pb-12">
+            <div className="border-b border-red-600 pb-12" ref={sectionRefDue}>
               <h2 className="text-white climate-crisis text-2xl md:text-4xl lg:text-5xl mb-6 text-center">
-              {t("contatti_9")}
+              {splitText(t("contatti_9"),contattiTre)}
               </h2>
               <p className="mt-1 text-white courgette-regular text-2xl md:text-3xl lg:text-4xl text-center">
-               {t("contatti_10")}
+               {splitText(t("contatti_10"),contattiQuatro)}
               </p>
 
               <div className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-6">

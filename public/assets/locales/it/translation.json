@@ -27,7 +27,8 @@
      "orari":"Orari",
      "contattaci":"Contattaci",
      "dove":"Dove siamo",
-
+      
+     "chisiamo":"Chi siamo",
      "chisiamo_1":"Venite a conoscere la nostra Arte",
       "chisiamo_2":"    Scopri un mondo di creatività e passione. Ogni opera racconta una storia, ogni dettaglio è curato con amore e precisione. La nostra arte è un viaggio che trasforma idee in realtà, dando vita a qualcosa di unico e senza tempo. Vieni a trovarci e lasciati ispirare!",
 
@@ -46,7 +47,8 @@
      "policy_13":"Avviso agli Utenti europei: la presente informativa privacy è redatta in adempimento degli obblighi previsti dall’Art. 10 della Direttiva n. 95/46/CE, nonché a quanto previsto dalla Direttiva 2002/58/CE, come aggiornata dalla Direttiva 2009/136/CE, in materia di Cookie. Questa informativa privacy riguarda esclusivamente questo sito.",
 
 
-     "contatti_1":"# Richiedi Appuntamento",
+     "contatti_1":"# Richiedi",
+     "contatti_1.5":"Appuntamento",
      "contatti_2":"Verrai ricontattato il prima possibile.",
      "contatti_3":"Nome",
      "contatti_4":"Cognome",

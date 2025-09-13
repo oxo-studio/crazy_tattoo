@@ -23,6 +23,7 @@
        "contattaci":"Contactez-nous",
         "dove":" Emplacement",
 
+        "chisiamo":"À propos de nous",
        "chisiamo_1": "Venez découvrir notre Art",
        "chisiamo_2": "Découvrez un monde de créativité et de passion. Chaque œuvre raconte une histoire, chaque détail est réalisé avec amour et précision. Notre art est un voyage qui transforme les idées en réalité, créant quelque chose d'unique et intemporel. Venez nous rendre visite et laissez-vous inspirer ",
 
@@ -43,7 +44,8 @@
 
 
 
-        "contatti_1": "# Demander un rendez-vous",
+        "contatti_1": "# Demander un",
+       "contatti_1.5":"rendez-vous",
         "contatti_2": "Vous serez contacté dès que possible.",
          "contatti_3": "Prénom",
          "contatti_4": "Nom de famille",

@@ -25,6 +25,7 @@
           "contattaci":"Contact Us",
             "dove":"Our Location",
 
+            "chisiamo":"About us",
             "chisiamo_1": "Come and discover our Art",
             "chisiamo_2": "Discover a world of creativity and passion. Every piece tells a story, every detail is crafted with love and precision. Our art is a journey that transforms ideas into reality, creating something unique and timeless. Visit us and let yourself be inspired!",
 
@@ -44,7 +45,8 @@
 
 
 
-            "contatti_1": "# Request Appointment",
+            "contatti_1": "# Request",
+            "contatti_1.5":"Appointment",
             "contatti_2": "You will be contacted as soon as possible.",
             "contatti_3": "First Name",
             "contatti_4": "Last Name",
